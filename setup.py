@@ -4,7 +4,7 @@ setup(
     name='Qivivo_python_API',
     version='0.1.0',
     packages=['qivivo'],
-    install_requires=['requests', 'oauthlib'],
+    install_requires=['requests', 'oauthlib', 'pytz'],
     url='',
     project_urls={
         'Qivivo API': 'https://documenter.getpostman.com/view/1147709/qivivo-api/2MsDNL'
