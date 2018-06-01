@@ -37,8 +37,8 @@ The qivivo API module can be imported as ``qivivo_api``.
     _CLIENT_ID = 'XXXXXX'
     _CLIENT_SECRET = 'XXXXXX'
 
-    scope = 'user_basic_information read_devices read_thermostats read_wireless_modules read_programmation ' \
-            'update_programmation read_house_data update_house_settings'
+    scope = 'user_basic_information read_devices read_thermostats read_wireless_modules '\
+            'read_programmation update_programmation read_house_data update_house_settings'
 
     authorization = QivivoAuth(client_id=_CLIENT_ID, client_secret=_CLIENT_SECRET, scope=scope)
     data = QivivoData(authorization)
