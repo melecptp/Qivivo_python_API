@@ -412,10 +412,12 @@ class QivivoThermostat(QivivoSensor):
         self.set_active_program(prog)
 
     def set_active_program(self, prog):
+        var = _VAR_NAMES['active_program']
         if prog in [p['id'] for p in self.programs]:
             url = _BASE_URL + 'devices/{}s/{}/programs/{}/active'.format(self._type, self._id, prog)
             response = self._auth.put(url)
             if response is not None:
+                setattr(self, '_{}'.format(var), prog)
                 logger.info(response.get('message', []))
         else:
             logger.warning('Promgram {} is not defined for {}'.format(self._id))
